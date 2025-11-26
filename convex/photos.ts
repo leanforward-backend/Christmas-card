@@ -28,3 +28,10 @@ export const list = query({
     );
   },
 });
+
+export const deletePhoto = mutation({
+  args: { id: v.id("photos") },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+  },
+});

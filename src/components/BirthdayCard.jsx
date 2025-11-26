@@ -40,11 +40,11 @@ export default function BirthdayCard() {
               <div className="flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-3xl text-gray-800 font-bold mb-6 font-['Caveat']">
-                    Dearest Dad,
+                    Happy Birthday Dad,
                   </h3>
 
                   {showTyping && (
-                    <TypewriterText text="Wishing you the most amazing birthday! Blah blah blah stuff about dads birthday etc." />
+                    <TypewriterText text="Wishing you the most amazing birthday! Hope it's a good one with plenty of BBQing and beers. It's a shame that I couldn't be there for it, but I'll see you at christmas." />
                   )}
                 </div>
 
@@ -87,7 +87,7 @@ export default function BirthdayCard() {
                   <div className="text-6xl">🎈</div>
                   <div className="text-6xl">🎁</div>
                   <p className="text-2xl text-gray-600 font-['Caveat'] mt-6">
-                    May all your wishes come true!
+                    Have a great birthday week!
                   </p>
                 </div>
               </div>
