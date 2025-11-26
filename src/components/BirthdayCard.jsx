@@ -44,13 +44,13 @@ export default function BirthdayCard() {
                   </h3>
 
                   {showTyping && (
-                    <TypewriterText text="Wishing you the most amazing birthday! You've always been my rock and my inspiration. May this year bring you as much joy as you bring to everyone around you. Here's to many more adventures together!" />
+                    <TypewriterText text="Wishing you the most amazing birthday! Blah blah blah stuff about dads birthday etc." />
                   )}
                 </div>
 
                 <div className="text-right">
                   <p className="text-2xl text-gray-800 font-['Caveat'] font-bold">
-                    - With Love ❤️
+                    - Love Toby.
                   </p>
                 </div>
               </div>
