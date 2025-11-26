@@ -31,7 +31,7 @@ export default function BirthdayCard() {
           {/* Card Container */}
           <div className="relative w-full h-full preserve-3d">
             {/* Left Page (Base) - Always visible */}
-            <div className="absolute left-0 w-1/2 h-full bg-[#fdfbf7] rounded-l-2xl shadow-2xl p-8 flex flex-col z-10">
+            <div className="absolute left-1/4 w-1/2 h-full bg-[#fdfbf7] shadow-2xl p-8 flex flex-col z-10">
               <div className="flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-3xl text-gray-800 font-bold mb-6 font-['Caveat']">
@@ -57,10 +57,10 @@ export default function BirthdayCard() {
                 rotateY,
                 transformOrigin: "left center",
               }}
-              className="absolute left-1/2 w-1/2 h-full preserve-3d z-20"
+              className="absolute left-1/4 w-1/2 h-full preserve-3d z-20"
             >
               {/* Front Cover (visible when closed) */}
-              <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 rounded-r-2xl shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-yellow-400">
+              <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-yellow-400">
                 <div className="text-center">
                   <div className="text-8xl mb-4">🎂</div>
                   <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
@@ -76,7 +76,7 @@ export default function BirthdayCard() {
               </div>
 
               {/* Inside Right Page (visible when opened) */}
-              <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] rounded-r-2xl shadow-inner p-8 flex items-center justify-center">
+              <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] shadow-inner p-8 flex items-center justify-center">
                 <div className="text-center space-y-4">
                   <div className="text-6xl">🎉</div>
                   <div className="text-6xl">🎈</div>
