@@ -30,7 +30,7 @@ export default function BirthdayCard() {
   const translateX = useTransform(scrollYProgress, [0, 0.8], [0, 225]);
 
   // Mobile: Move the card down as it opens
-  const translateY = useTransform(scrollYProgress, [0, 0.8], [0, 250]);
+  const translateY = useTransform(scrollYProgress, [0, 0.8], [0, 100]);
 
   const [showTyping, setShowTyping] = useState(false);
 
