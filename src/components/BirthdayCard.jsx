@@ -123,7 +123,7 @@ export default function BirthdayCard() {
 
                     <div className="text-right">
                       <p className="text-2xl text-gray-800 font-['Caveat'] font-bold">
-                        - Love Toby.
+                        - Love Toby and Charlotte.
                       </p>
                     </div>
                   </div>
