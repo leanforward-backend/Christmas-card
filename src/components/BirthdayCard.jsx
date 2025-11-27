@@ -8,7 +8,6 @@ export default function BirthdayCard() {
     offset: ["start start", "end end"],
   });
 
-  // Detect mobile
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,25 +19,18 @@ export default function BirthdayCard() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Desktop: rotate on Y axis (left to right opening)
   const rotateY = useTransform(scrollYProgress, [0, 0.8], [0, -180]);
 
-  // Mobile: rotate on X axis (top to bottom opening)
   const rotateX = useTransform(scrollYProgress, [0, 0.8], [0, 180]);
 
-  // Desktop: Move the card to the right as it opens to keep it centered
   const translateX = useTransform(scrollYProgress, [0, 0.8], [0, 225]);
-
-  // Mobile: Move the card down as it opens
   const translateY = useTransform(scrollYProgress, [0, 0.8], [0, 100]);
 
   const [showTyping, setShowTyping] = useState(false);
 
-  // Start typing animation when card is opened
   useEffect(() => {
     const rotation = isMobile ? rotateX : rotateY;
     const unsubscribe = rotation.on("change", (v) => {
-      // Check absolute value to handle both positive (mobile) and negative (desktop) rotations
       if (Math.abs(v) > 90) setShowTyping(true);
       else setShowTyping(false);
     });
@@ -52,7 +44,6 @@ export default function BirthdayCard() {
     >
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="w-full max-w-5xl h-[600px] md:h-[600px] perspective-[2000px]">
-          {/* Card Container */}
           <motion.div
             style={{
               x: isMobile ? 0 : translateX,
@@ -60,10 +51,8 @@ export default function BirthdayCard() {
             }}
             className="relative w-full h-full preserve-3d flex items-center justify-center"
           >
-            {/* MOBILE LAYOUT - Horizontal Card */}
             {isMobile ? (
               <>
-                {/* Bottom Page (Base) - Always visible on mobile */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-1/2 bg-[#fdfbf7] shadow-2xl p-4 flex flex-col z-10">
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
@@ -84,7 +73,6 @@ export default function BirthdayCard() {
                   </div>
                 </div>
 
-                {/* Top Page/Cover - Opens downward like a book on mobile */}
                 <motion.div
                   style={{
                     rotateX,
@@ -92,7 +80,6 @@ export default function BirthdayCard() {
                   }}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-1/2 preserve-3d z-20"
                 >
-                  {/* Front Cover (visible when closed) */}
                   <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-cyan-400">
                     <div className="text-center">
                       <div className="text-5xl mb-3">🎂</div>
@@ -108,7 +95,6 @@ export default function BirthdayCard() {
                     </div>
                   </div>
 
-                  {/* Inside Top Page (visible when opened) */}
                   <div className="absolute inset-0 backface-hidden rotate-x-180 bg-[#fdfbf7] shadow-inner p-4 flex items-center justify-center">
                     <div className="text-center space-y-2">
                       <div className="text-4xl">🎉</div>
@@ -122,9 +108,7 @@ export default function BirthdayCard() {
                 </motion.div>
               </>
             ) : (
-              /* DESKTOP LAYOUT - Vertical Card */
               <>
-                {/* Left Page (Base) - Always visible */}
                 <div className="absolute left-1/4 w-1/2 h-full bg-[#fdfbf7] shadow-2xl p-8 flex flex-col z-10">
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
@@ -145,7 +129,6 @@ export default function BirthdayCard() {
                   </div>
                 </div>
 
-                {/* Right Page/Cover - Opens like a book */}
                 <motion.div
                   style={{
                     rotateY,
@@ -153,7 +136,6 @@ export default function BirthdayCard() {
                   }}
                   className="absolute left-1/4 w-1/2 h-full preserve-3d z-20"
                 >
-                  {/* Front Cover (visible when closed) */}
                   <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-cyan-400">
                     <div className="text-center">
                       <div className="text-8xl mb-4">🎂</div>
@@ -169,7 +151,6 @@ export default function BirthdayCard() {
                     </div>
                   </div>
 
-                  {/* Inside Right Page (visible when opened) */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] shadow-inner p-8 flex items-center justify-center">
                     <div className="text-center space-y-4">
                       <div className="text-6xl">🎉</div>

@@ -15,10 +15,8 @@ export default function Gallery() {
   const onDrop = useCallback(
     async (acceptedFiles) => {
       for (const file of acceptedFiles) {
-        // 1. Get upload URL
         const postUrl = await generateUploadUrl();
 
-        // 2. Upload file
         const result = await fetch(postUrl, {
           method: "POST",
           headers: { "Content-Type": file.type },
@@ -26,7 +24,6 @@ export default function Gallery() {
         });
         const { storageId } = await result.json();
 
-        // 3. Save metadata
         await savePhoto({ storageId });
       }
     },
@@ -38,7 +35,6 @@ export default function Gallery() {
     accept: { "image/*": [] },
   });
 
-  // Navigate to previous photo
   const goToPrevious = useCallback(() => {
     if (!selectedPhoto || photos.length === 0) return;
     const currentIndex = photos.findIndex((p) => p._id === selectedPhoto._id);
@@ -47,7 +43,6 @@ export default function Gallery() {
     setSelectedPhoto(photos[previousIndex]);
   }, [selectedPhoto, photos]);
 
-  // Navigate to next photo
   const goToNext = useCallback(() => {
     if (!selectedPhoto || photos.length === 0) return;
     const currentIndex = photos.findIndex((p) => p._id === selectedPhoto._id);
@@ -131,7 +126,6 @@ export default function Gallery() {
         </div>
       </motion.div>
 
-      {/* Full-screen photo viewer modal */}
       <AnimatePresence>
         {selectedPhoto && (
           <motion.div
@@ -153,7 +147,6 @@ export default function Gallery() {
               <X className="w-6 h-6 text-white" />
             </motion.button>
 
-            {/* Left arrow - only show if there are multiple photos */}
             {photos.length > 1 && (
               <motion.button
                 initial={{ opacity: 0, x: -20 }}
@@ -170,7 +163,6 @@ export default function Gallery() {
               </motion.button>
             )}
 
-            {/* Right arrow - only show if there are multiple photos */}
             {photos.length > 1 && (
               <motion.button
                 initial={{ opacity: 0, x: 20 }}
