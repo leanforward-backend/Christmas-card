@@ -156,7 +156,7 @@ export default function BirthdayCard() {
                   {/* Front Cover (visible when closed) */}
                   <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-cyan-400">
                     <div className="text-center">
-                      <div className="text-8xl mb-4">�</div>
+                      <div className="text-8xl mb-4">🎂</div>
                       <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
                         Happy Birthday
                       </h2>
@@ -172,7 +172,7 @@ export default function BirthdayCard() {
                   {/* Inside Right Page (visible when opened) */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] shadow-inner p-8 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <div className="text-6xl">�</div>
+                      <div className="text-6xl">🎉</div>
                       <div className="text-6xl">🎈</div>
                       <div className="text-6xl">🎁</div>
                       <p className="text-2xl text-gray-600 font-['Caveat'] mt-6">
