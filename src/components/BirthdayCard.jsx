@@ -90,17 +90,17 @@ export default function BirthdayCard() {
                   }}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-1/2 preserve-3d z-20 cursor-pointer"
                 >
-                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-yellow-400">
+                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-green-500">
                     <div className="text-center">
                       <div className="text-5xl mb-3">🎅</div>
-                      <h2 className="text-3xl font-bold text-yellow-400 mb-1 font-['Caveat']">
+                      <h2 className="text-3xl font-bold text-green-500 mb-1 font-['Caveat']">
                         Merry Christmas
                       </h2>
-                      <h2 className="text-4xl font-bold text-yellow-300 font-['Caveat']">
+                      <h2 className="text-4xl font-bold text-green-400 font-['Caveat']">
                         from down under
                       </h2>
                       <p className="mt-4 text-white text-opacity-90 text-sm animate-pulse">
-                        ↓ Tap or Scroll to open ↓
+                        ↓ Tap to open ↓
                       </p>
                     </div>
                   </div>
@@ -146,13 +146,13 @@ export default function BirthdayCard() {
                   }}
                   className="absolute left-1/4 w-1/2 h-full preserve-3d z-20"
                 >
-                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-yellow-400">
+                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-green-400">
                     <div className="text-center">
                       <div className="text-8xl mb-4">🎅</div>
-                      <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
+                      <h2 className="text-6xl font-bold text-green-400 mb-2 font-['Caveat']">
                         Merry Christmas
                       </h2>
-                      <h2 className="text-7xl font-bold text-yellow-300 font-['Caveat']">
+                      <h2 className="text-7xl font-bold text-green-300 font-['Caveat']">
                         From down under
                       </h2>
                       <p className="mt-8 text-white text-opacity-90 text-lg animate-pulse">
