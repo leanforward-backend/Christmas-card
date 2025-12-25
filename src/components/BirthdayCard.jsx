@@ -57,17 +57,16 @@ export default function BirthdayCard() {
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl text-gray-800 font-bold mb-3 font-['Caveat']">
-                        Happy Birthday Dad,
+                        Merry Christmas,
                       </h3>
-
                       {showTyping && (
-                        <TypewriterText text="Wishing you the most amazing birthday! Hope it's a good one with plenty of BBQing and beers. It's a shame that I couldn't be there for it, but I'll see you at christmas." />
+                        <TypewriterText text="Wishing you all an amazing christmas, can't belive that it's been a year already since I was over there. Had such a great time with you guys last year, I really appreciated you having me over, you are a wonderful family. Things seem to be going well for me career wise, so hopefully i'll end up working in America in a few years and I'll be able to see you all then!" />
                       )}
                     </div>
 
                     <div className="text-right">
                       <p className="text-lg text-gray-800 font-['Caveat'] font-bold">
-                        - Love Toby and Charlotte.
+                        - Toby.
                       </p>
                     </div>
                   </div>
@@ -82,12 +81,12 @@ export default function BirthdayCard() {
                 >
                   <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-cyan-400">
                     <div className="text-center">
-                      <div className="text-5xl mb-3">🎂</div>
+                      <div className="text-5xl mb-3">🎅</div>
                       <h2 className="text-3xl font-bold text-yellow-400 mb-1 font-['Caveat']">
-                        Happy Birthday
+                        Merry Christmas
                       </h2>
                       <h2 className="text-4xl font-bold text-yellow-300 font-['Caveat']">
-                        Dad!
+                        from down under
                       </h2>
                       <p className="mt-4 text-white text-opacity-90 text-sm animate-pulse">
                         ↓ Scroll to open ↓
@@ -97,11 +96,11 @@ export default function BirthdayCard() {
 
                   <div className="absolute inset-0 backface-hidden rotate-x-180 bg-[#fdfbf7] shadow-inner p-4 flex items-center justify-center">
                     <div className="text-center space-y-2">
-                      <div className="text-4xl">🎉</div>
-                      <div className="text-4xl">🎈</div>
+                      <div className="text-4xl">🎄</div>
+                      <div className="text-4xl">❄️</div>
                       <div className="text-4xl">🎁</div>
                       <p className="text-lg text-gray-600 font-['Caveat'] mt-3">
-                        Have a great birthday week!
+                        Have a great christmas in America
                       </p>
                     </div>
                   </div>
@@ -113,17 +112,17 @@ export default function BirthdayCard() {
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-3xl text-gray-800 font-bold mb-6 font-['Caveat']">
-                        Happy Birthday Dad,
+                        Merry Christmas,
                       </h3>
 
                       {showTyping && (
-                        <TypewriterText text="Wishing you the most amazing birthday! Hope it's a good one with plenty of BBQing and beers. It's a shame that I couldn't be there for it, but I'll see you at christmas." />
+                        <TypewriterText text="Wishing you all an amazing christmas, can't belive that it's been a year already since I was over there. Had such a great time with you guys last year, I really appreciated you having me over, you are a wonderful family. Things seem to be going well for me career wise, so hopefully i'll end up working in America in a few years and I'll be able to see you all then!" />
                       )}
                     </div>
 
                     <div className="text-right">
                       <p className="text-2xl text-gray-800 font-['Caveat'] font-bold">
-                        - Love Toby and Charlotte.
+                        - Toby
                       </p>
                     </div>
                   </div>
@@ -140,10 +139,10 @@ export default function BirthdayCard() {
                     <div className="text-center">
                       <div className="text-8xl mb-4">🎂</div>
                       <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
-                        Happy Birthday
+                        Merry Christmas
                       </h2>
                       <h2 className="text-7xl font-bold text-yellow-300 font-['Caveat']">
-                        Dad!
+                        From down under
                       </h2>
                       <p className="mt-8 text-white text-opacity-90 text-lg animate-pulse">
                         ↓ Scroll to open ↓
@@ -157,7 +156,7 @@ export default function BirthdayCard() {
                       <div className="text-6xl">🎈</div>
                       <div className="text-6xl">🎁</div>
                       <p className="text-2xl text-gray-600 font-['Caveat'] mt-6">
-                        Have a great birthday week!
+                        Have a great christmas in America
                       </p>
                     </div>
                   </div>

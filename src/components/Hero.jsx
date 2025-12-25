@@ -37,7 +37,7 @@ export default function Hero() {
         className="z-10 text-center"
       >
         <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
-          Happy Birthday Dad!
+          Merry Christmas!
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
           Wishing you a day filled with joy, laughter, and unforgettable
