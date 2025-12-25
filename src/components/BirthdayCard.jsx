@@ -65,7 +65,7 @@ export default function BirthdayCard() {
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl text-gray-800 font-bold mb-3 font-['Caveat']">
-                        Merry Christmas,
+                        Merry Christmas Longs,
                       </h3>
                       {showTyping && (
                         <TypewriterText text="Wishing you all an amazing christmas, can't belive that it's been a year already since I was over there. Had such a great time with you guys last year, I really appreciated you having me over, you are a wonderful family. Things seem to be going well for me career wise, so hopefully i'll end up working in America in a few years and I'll be able to see you all then!" />
@@ -123,7 +123,7 @@ export default function BirthdayCard() {
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-3xl text-gray-800 font-bold mb-6 font-['Caveat']">
-                        Merry Christmas,
+                        Merry Christmas Longs,
                       </h3>
 
                       {showTyping && (
