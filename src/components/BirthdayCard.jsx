@@ -148,7 +148,7 @@ export default function BirthdayCard() {
                 >
                   <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-yellow-400">
                     <div className="text-center">
-                      <div className="text-8xl mb-4">🎄</div>
+                      <div className="text-8xl mb-4">🎅</div>
                       <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
                         Merry Christmas
                       </h2>
@@ -163,8 +163,8 @@ export default function BirthdayCard() {
 
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] shadow-inner p-8 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <div className="text-6xl">�</div>
-                      <div className="text-6xl">�</div>
+                      <div className="text-6xl">🎄</div>
+                      <div className="text-6xl">❄️</div>
                       <div className="text-6xl">🎁</div>
                       <p className="text-2xl text-gray-600 font-['Caveat'] mt-6">
                         Have a great christmas in America
