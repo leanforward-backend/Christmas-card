@@ -28,20 +28,28 @@ export default function BirthdayCard() {
 
   const [showTyping, setShowTyping] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const rotation = isMobile ? rotateX : rotateY;
     const unsubscribe = rotation.on("change", (v) => {
-      if (Math.abs(v) > 90) setShowTyping(true);
-      else setShowTyping(false);
+      if (isOpen) {
+        setShowTyping(true);
+      } else if (Math.abs(v) > 90) {
+        setShowTyping(true);
+      } else {
+        setShowTyping(false);
+      }
     });
+
+    // Check isOpen immediately
+    if (isOpen) setShowTyping(true);
+
     return () => unsubscribe();
-  }, [rotateY, rotateX, isMobile]);
+  }, [rotateY, rotateX, isMobile, isOpen]);
 
   return (
-    <div
-      ref={containerRef}
-      className="h-[400vh] relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
-    >
+    <div ref={containerRef} className="h-[400vh] relative bg-slate-900">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4">
         <div className="w-full max-w-5xl h-[600px] md:h-[600px] perspective-[2000px]">
           <motion.div
@@ -73,13 +81,16 @@ export default function BirthdayCard() {
                 </div>
 
                 <motion.div
+                  onClick={() => setIsOpen(!isOpen)}
+                  initial={false}
+                  animate={{ rotateX: isOpen ? 180 : 0 }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
                   style={{
-                    rotateX,
                     transformOrigin: "top center",
                   }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-1/2 preserve-3d z-20"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-1/2 preserve-3d z-20 cursor-pointer"
                 >
-                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-cyan-400">
+                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-4 border-4 border-yellow-400">
                     <div className="text-center">
                       <div className="text-5xl mb-3">🎅</div>
                       <h2 className="text-3xl font-bold text-yellow-400 mb-1 font-['Caveat']">
@@ -89,7 +100,7 @@ export default function BirthdayCard() {
                         from down under
                       </h2>
                       <p className="mt-4 text-white text-opacity-90 text-sm animate-pulse">
-                        ↓ Scroll to open ↓
+                        ↓ Tap or Scroll to open ↓
                       </p>
                     </div>
                   </div>
@@ -135,9 +146,9 @@ export default function BirthdayCard() {
                   }}
                   className="absolute left-1/4 w-1/2 h-full preserve-3d z-20"
                 >
-                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-cyan-400">
+                  <div className="absolute inset-0 backface-hidden bg-gradient-to-br from-red-600 to-red-700 shadow-2xl flex flex-col items-center justify-center p-8 border-4 border-yellow-400">
                     <div className="text-center">
-                      <div className="text-8xl mb-4">🎂</div>
+                      <div className="text-8xl mb-4">🎄</div>
                       <h2 className="text-6xl font-bold text-yellow-400 mb-2 font-['Caveat']">
                         Merry Christmas
                       </h2>
@@ -152,8 +163,8 @@ export default function BirthdayCard() {
 
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#fdfbf7] shadow-inner p-8 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <div className="text-6xl">🎉</div>
-                      <div className="text-6xl">🎈</div>
+                      <div className="text-6xl">�</div>
+                      <div className="text-6xl">�</div>
                       <div className="text-6xl">🎁</div>
                       <p className="text-2xl text-gray-600 font-['Caveat'] mt-6">
                         Have a great christmas in America
